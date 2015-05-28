@@ -46,9 +46,18 @@ public class ToDo extends TaskList{
     
     
     
-    //Methods not supported by this derived class
+    /**
+     * Method not supported by this derived class
+     * @param taskName
+     * @return false because task deletion not supported
+     */
     @Override
     public boolean deleteTask(String taskName) { return false; };
+    /**
+     * Method not supported by this derived class
+     * @param taskName
+     * @return false because permanent task deletion not supported
+     */
     @Override
     public boolean permanentlyDeleteTask(String taskName) { return false; };
 

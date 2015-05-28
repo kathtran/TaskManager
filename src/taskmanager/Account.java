@@ -19,7 +19,6 @@ public class Account {
     private final Done done;
     
     
-    //Default constructor
     public Account() {
         this.username = null;
         this.password = null;
@@ -144,14 +143,19 @@ public class Account {
     
     
     
-    //Method to undo the most recent task deletion
+    /**
+     * Method to undo the most recent task deletion
+     * @return true if successful else false
+     */
     public boolean undoDeletion() {
         return done.undoDeletion();
     }
     
     
   
-    //Method to display account username and password
+    /**
+     * Method to display account username and password
+     */
     public void displayCredentials() {
         System.out.println("USERNAME: "+this.getUsername());
         System.out.print("PASSWORD: ");
@@ -165,7 +169,9 @@ public class Account {
     
     
     
-    //Method to display all task lists
+    /**
+     * Method to display all task lists
+     */
     public void displayTaskLists() {
         toDo.displayTasks();
         inProg.displayTasks();

@@ -30,7 +30,7 @@ public class InProg extends TaskList{
      */
     @Override
     public int moveTask(String taskName, TaskList listName) {
-        if(validTask(taskName) && listName.validTask(taskName))
+        if (validTask(taskName) && listName.validTask(taskName))
             return 1;
         else if (validTask(taskName) && listName instanceof Done) {
             String taskToMove = selectTask(taskName);
@@ -45,9 +45,18 @@ public class InProg extends TaskList{
     
     
     
-    //Methods not supported by this derived class
+    /**
+     * Method not supported by this derived class
+     * @param taskName
+     * @return false because task deletion not supported
+     */
     @Override
     public boolean deleteTask(String taskName) { return false; };
+    /**
+     * Method not supported by this derived class
+     * @param taskName
+     * @return false because permanent task deletion not supported
+     */
     @Override
     public boolean permanentlyDeleteTask(String taskName) { return false; };
     

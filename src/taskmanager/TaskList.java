@@ -136,7 +136,9 @@ public abstract class TaskList {
     
     
     
-    //Method to display all tasks in the list
+    /**
+     * Method to display all tasks in the list
+     */
     public void displayTasks() {
         Set setOfTasks = this.listContainer.entrySet();
         Iterator i = setOfTasks.iterator();
@@ -145,7 +147,6 @@ public abstract class TaskList {
   
         while (i.hasNext()) {
             Map.Entry taskKeyAndValue = (Map.Entry)i.next();
-//            System.out.print("KEY: "+taskKeyAndValue.getKey()+" ");
             System.out.println(taskKeyAndValue.getValue());
         }
     }

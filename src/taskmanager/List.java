@@ -26,7 +26,9 @@ public class List {
     private int numberOfAccounts;
 
     
-    //Method to load all saved accounts
+    /**
+     * Method to load all saved accounts
+     */
     public void loadAccounts() {
         boolean check = true;
         int uniqueAccountNumber = 1;
@@ -163,14 +165,18 @@ public class List {
 
     
     
-    //Wrapper method to display all accounts
+    /**
+     * Wrapper method to display all accounts
+     */
     public void displayAccounts() {
         if (head == null)
             return;
         displayAccounts(head);
     }
 
-    //Method to display all accounts
+    /**
+     * Method to display all accounts
+     */
     private void displayAccounts(Node head) {
         Node temp = head;
         do {
@@ -181,14 +187,18 @@ public class List {
     
     
     
-    //Wrapper method to display all accounts and their contents
+    /**
+     * Wrapper method to display all accounts and their contents
+     */
     public void displayAll() {
         if (head == null)
             return;
         displayAll(head);
     }
     
-    //Method to display all accounts and their contents
+    /**
+     * Method to display all accounts and their contents
+     */
     private void displayAll(Node head) {
         Node temp = head;
         do {
@@ -201,7 +211,10 @@ public class List {
 
     
     
-    //Wrapper method to save current state of all user accounts
+    /**
+     * Wrapper method to save current state of all user accounts
+     * @return true if data was present and saved else false
+     */
     public boolean save() {
         if (head == null)
             return false;

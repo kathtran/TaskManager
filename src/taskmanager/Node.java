@@ -17,7 +17,6 @@ public class Node extends Account {
     private Node previous;
     
     
-    //Default constructor
     public Node() {
         this.next = null;
         this.previous = null;
