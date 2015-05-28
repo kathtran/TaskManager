@@ -1,0 +1,20 @@
+USERNAME:
+cs300student
+PASSWORD:
+spring2015
+TO DO:
+final prep
+study
+final writeup
+IN PROGRESS:
+unit tests
+program
+review diagrams
+homework 3
+DONE:
+requirements
+design
+test plan
+homework 1
+homework 2
+comment code

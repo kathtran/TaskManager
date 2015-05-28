@@ -1,0 +1,16 @@
+USERNAME:
+johnsmith
+PASSWORD:
+password1
+TO DO:
+buy present
+clean room
+math homework
+IN PROGRESS:
+buy textbooks
+groceries
+buy card
+DONE:
+english homework
+science homework
+feed dog

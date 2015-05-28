@@ -1,0 +1,14 @@
+USERNAME:
+janedoe
+PASSWORD:
+12345
+TO DO:
+make breakfast
+pack for vacation
+buy souvenirs
+IN PROGRESS:
+plan trip
+explore
+DONE:
+book hotel
+book flight
