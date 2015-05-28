@@ -1,8 +1,6 @@
 package taskmanager;
 
-import org.junit.After;
 import org.junit.AfterClass;
-import org.junit.Before;
 import org.junit.BeforeClass;
 import org.junit.Test;
 import static org.junit.Assert.*;
@@ -13,23 +11,16 @@ import static org.junit.Assert.*;
  */
 public class TaskListTest {
     
-    public TaskListTest() { }
-    
     @BeforeClass
     public static void setUpClass() {
-        System.out.println("/********* STARTING TESTS FOR TASKLISTTEST.JAVA *********/");
+        System.out.println("/********* STARTING TESTS FOR TASKLIST *********/");
     }
     
     @AfterClass
     public static void tearDownClass() {
-        System.out.println("/********* TESTING FOR TASKLISTTEST.JAVA IS OVER *********/");
+        System.out.println("/********* TESTING FOR TASKLIST IS OVER *********/");
     }
-    
-    @Before
-    public void setUp() { }
-    
-    @After
-    public void tearDown() { }
+
 
     /**
      * Test of createKey method, of class TaskList.
@@ -46,18 +37,33 @@ public class TaskListTest {
     }
 
     /**
-     * Test of addTask method, of class TaskList.
+     * Testing addTask method of class TaskList against an INVALID TASK NAME
      */
     @Test
-    public void testAddTask() {
-        System.out.println("addTask");
-        String taskName = "A";
-        String testTaskNull = new String();
-        String testTaskEmpty = "";
+    public void testAddingInvalidTaskName() {
+        System.out.println("addTask Test Case 1: Invalid Task Name");
+        String emptyTaskName = "";
+        String nullTaskName = new String();
         TaskList instance = new ToDo();
-        assertFalse("Exception case must return false", instance.addTask(testTaskNull));
-        assertFalse("Exception case must return false", instance.addTask(testTaskEmpty));
-        assertTrue("Passing case must return true", instance.addTask(taskName));
+        assertFalse("An emptry String must return false", instance.addTask(emptyTaskName));
+        assertFalse("An uninitialized String must return false", instance.addTask(nullTaskName));
+    }
+    
+    /**
+     * Testing addTask method of class TaskList against a VALID TASK NAME
+     */
+    @Test
+    public void testAddingValidTaskName() {
+        System.out.println("addTask Test Case 2: Valid Task Name");
+        String allCharacters = "Abcd Efgh";
+        String allIntegers = "1234 5678";
+        String allSymbols = "!@#$ %^&*";
+        String combination = "Aa12!@";
+        TaskList instance = new ToDo();
+        assertTrue("A String of all characters must return true", instance.addTask(allCharacters));
+        assertTrue("A String of all integers must return true", instance.addTask(allIntegers));
+        assertTrue("A String of all symbols must return true", instance.addTask(allSymbols));
+        assertTrue("A String of a combination of characters, integers, and symbols must return true", instance.addTask(combination));
     }
 
     /**
@@ -68,9 +74,9 @@ public class TaskListTest {
         System.out.println("validTask");
         String taskName = "A";
         TaskList instance = new ToDo();
-        assertFalse("Exception case must return false", instance.validTask(taskName));
+        assertFalse("A task currently absent from the list must return false", instance.validTask(taskName));
         instance.addTask(taskName);
-        assertTrue("Passing case must return true", instance.validTask(taskName));
+        assertTrue("A task currently existing within the list must return true", instance.validTask(taskName));
     }
     
 }
